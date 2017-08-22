@@ -1,4 +1,14 @@
 <h1><%= @recipe.title %></h1>
+<p>
+  Tags:
+  <% @recipe.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
+<% if @recipe.image.exists? %>
+  <%= image_tag @recipe.image.url(:medium) %><br/>
+<% end %>
+<p><%= image_tag @recipe.image.url %></p>
 <p><%= @recipe.body %></p>
 <%= link_to "edit", edit_recipe_path(@recipe) %>
 <%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"}%>

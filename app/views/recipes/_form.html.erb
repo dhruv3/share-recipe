@@ -1,4 +1,15 @@
-<%= form_for(@recipe) do |f| %>
+<%= form_for(@recipe, html: {multipart: true}) do |f| %>
+  <p>
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
+  </p>
+  <p>
+    <% if @recipe.image.exists? %>
+      <%= image_tag @recipe.image.url(:medium) %><br/>
+    <% end %>
+    <%= f.label :image, "Attach a New Image" %><br />
+    <%= f.file_field :image %>
+  </p>
   <ul>
   <% @recipe.errors.full_messages.each do |error| %>
     <li><%= error %></li>
