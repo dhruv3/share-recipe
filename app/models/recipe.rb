@@ -1,4 +1,5 @@
 class Recipe < ActiveRecord::Base
+  authenticates_with_sorcery!
   has_many :comments
   has_many :taggings
   has_many :tags, through: :taggings
