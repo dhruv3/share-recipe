@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20170822230311) do
 
-  create_table "authors", force: :cascade do |t|
+  create_table "chefs", force: :cascade do |t|
     t.string   "username",         null: false
     t.string   "email",            null: false
     t.string   "crypted_password", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170822230311) do
     t.datetime "updated_at"
   end
 
-  add_index "authors", ["email"], name: "index_authors_on_email", unique: true
+  add_index "chefs", ["email"], name: "index_chefs_on_email", unique: true
 
   create_table "comments", force: :cascade do |t|
     t.string   "author_name"

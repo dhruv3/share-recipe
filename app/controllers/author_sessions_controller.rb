@@ -3,7 +3,6 @@ class AuthorSessionsController < ApplicationController
   end
 
   def create
-    debugger
     if login(params[:email], params[:password])
       redirect_back_or_to(recipes_path, notice: 'Logged in successfully.')
     else
@@ -14,6 +13,6 @@ class AuthorSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to(:authors, notice: 'Logged out!')
+    redirect_to(:chefs, notice: 'Logged out!')
   end
 end

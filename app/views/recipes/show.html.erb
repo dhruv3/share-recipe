@@ -1,19 +1,21 @@
-<h1><%= @recipe.title %></h1>
-<p>
-  Tags:
-  <% @recipe.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
+<% if logged_in? %>
+  <h1><%= @recipe.title %></h1>
+  <p>
+    Tags:
+    <% @recipe.tags.each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+  </p>
+  <% if @recipe.image.exists? %>
+    <%= image_tag @recipe.image.url(:medium) %><br/>
   <% end %>
-</p>
-<% if @recipe.image.exists? %>
-  <%= image_tag @recipe.image.url(:medium) %><br/>
-<% end %>
-<p><%= image_tag @recipe.image.url %></p>
-<p><%= @recipe.body %></p>
-<%= link_to "edit", edit_recipe_path(@recipe) %>
-<%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"}%>
-<%= render partial: 'comments/form' %>
-<%= link_to "<< Back to Recipe List", recipes_path %>
+  <p><%= image_tag @recipe.image.url %></p>
+  <p><%= @recipe.body %></p>
+  <%= link_to "edit", edit_recipe_path(@recipe) %>
+  <%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"}%>
+  <%= render partial: 'comments/form' %>
+  <%= link_to "<< Back to Recipe List", recipes_path %>
 
-<h3>Comments (<%= @recipe.comments.size %>)</h3>
-<%= render partial: 'recipes/comment', collection: @recipe.comments %>
+  <h3>Comments (<%= @recipe.comments.size %>)</h3>
+  <%= render partial: 'recipes/comment', collection: @recipe.comments %>
+<% end %>
