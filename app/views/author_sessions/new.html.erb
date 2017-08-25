@@ -5,15 +5,16 @@
     <%= label_tag :email %>
     <%= text_field_tag :email %>
     <br/>
+    <br/>
   </div>
   <div class="field">
     <%= label_tag :password %>
     <%= password_field_tag :password %>
     <br/>
+    <br/>
   </div>
   <div class="actions">
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Login", class: "btn btn-primary" %>
+    <%= link_to 'Back', recipes_path, class: "btn btn-primary" %>
   </div>
 <% end %>
-
-<%= link_to 'Back', recipes_path %>

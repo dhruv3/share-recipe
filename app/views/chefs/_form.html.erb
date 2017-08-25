@@ -27,7 +27,9 @@
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %>
   </div>
+  <br/>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', class: "btn btn-primary"%>
+    <%= link_to 'Back', chefs_path, class: "btn btn-primary" %>
   </div>
 <% end %>

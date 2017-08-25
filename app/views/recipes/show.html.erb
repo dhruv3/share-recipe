@@ -6,15 +6,19 @@
       <%= link_to tag.name, tag_path(tag) %>
     <% end %>
   </p>
-  <% if @recipe.image.exists? %>
+  <% if @recipe.image.file? %>
     <%= image_tag @recipe.image.url(:medium) %><br/>
   <% end %>
-  <p><%= image_tag @recipe.image.url %></p>
-  <p><%= @recipe.body %></p>
-  <%= link_to "edit", edit_recipe_path(@recipe) %>
-  <%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"}%>
+  <div class="container-fluid" style="border:1px solid #cecece;">
+    <div class="row">
+      <div class="col-xs-12"> <%= simple_format(@recipe.body) %></div>
+    </div>
+  </div>
+  <br/>
+  <%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-primary"  %>
+  <%= link_to "Delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"}, class: "btn btn-primary" %>
   <%= render partial: 'comments/form' %>
-  <%= link_to "<< Back to Recipe List", recipes_path %>
+  <%= link_to "<< Back to Recipe List", recipes_path, class: "btn btn-primary"  %>
 
   <h3>Comments (<%= @recipe.comments.size %>)</h3>
   <%= render partial: 'recipes/comment', collection: @recipe.comments %>

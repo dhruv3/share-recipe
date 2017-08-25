@@ -131,13 +131,6 @@ h1 {
   -ms-border-top-right-radius: 6px;
   -khtml-border-top-right-radius: 6px;
   border-top-right-radius: 6px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #42678d), color-stop(100%, #223447));
-  background-image: -moz-linear-gradient(#42678d,#223447);
-  background-image: linear-gradient(#42678d,#223447);
-  -moz-box-shadow: rgba(255, 255, 255, 0.15) 0 1px inset, white 0 1px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 0 1px inset, white 0 1px;
-  -o-box-shadow: rgba(255, 255, 255, 0.15) 0 1px inset, white 0 1px;
-  box-shadow: rgba(255, 255, 255, 0.15) 0 1px inset, white 0 1px;
   margin: -20px -20px 15px;
   padding: 20px;
   padding-right: 180px;
@@ -157,9 +150,6 @@ h1:after {
   height: 15px;
   bottom: -16px;
   border-top: 1px solid #e5e5e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(170,170,170,0.5)), color-stop(100%, rgba(255,255,255,0)));
-  background-image: -moz-linear-gradient(rgba(170,170,170,0.5),rgba(255,255,255,0));
-  background-image: linear-gradient(rgba(170,170,170,0.5),rgba(255,255,255,0));
   z-index: 1;
 }
 
@@ -459,70 +449,6 @@ form textarea {
   font-size: 1.1em;
 }
 
-input[type=submit] {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  font-size: 18px;
-  line-height: 1.2em;
-  padding: 0.3em 1em;
-  border-width: 1px;
-  background-color: #134e89;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #81a2c3), color-stop(10%, #4b749e), color-stop(50%, #2d4660), color-stop(50%, #283f55), color-stop(100%, #395878));
-  background-image: -moz-linear-gradient(#81a2c3,#4b749e 10%,#2d4660 50%,#283f55 50%,#395878);
-  background-image: linear-gradient(#81a2c3,#4b749e 10%,#2d4660 50%,#283f55 50%,#395878);
-  border-color: #192836;
-  text-shadow: #030e19 0px 1px 1px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.306) 0 0 0.1em 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.306) 0 0 0.1em 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.306) 0 0 0.1em 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.306) 0 0 0.1em 1px inset;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-  font-size: 1.2em;
-}
-
-input[type=submit],input[type=submit]:visited {
-  color: #fff;
-}
-
-input[type=submit]:hover,input[type=submit]:focus {
-  background-color: #11467c;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #769bbf), color-stop(10%, #466d94), color-stop(50%, #283f55), color-stop(50%, #23374b), color-stop(100%, #34516d));
-  background-image: -moz-linear-gradient(#769bbf,#466d94 10%,#283f55 50%,#23374b 50%,#34516d);
-  background-image: linear-gradient(#769bbf,#466d94 10%,#283f55 50%,#23374b 50%,#34516d);
-  border-color: #15202c;
-  text-shadow: #02070c 0px 1px 1px;
-}
-
-input[type=submit]:hover,input[type=submit]:hover:visited,input[type=submit]:focus,input[type=submit]:focus:visited {
-  color: #fff;
-}
-
-input[type=submit]:active {
-  background-color: #0f3f6e;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #283f55), color-stop(30%, #2b445c), color-stop(50%, #253a4e), color-stop(50%, #203244), color-stop(100%, #355371));
-  background-image: -moz-linear-gradient(#283f55,#2b445c 30%,#253a4e 50%,#203244 50%,#355371);
-  background-image: linear-gradient(#283f55,#2b445c 30%,#253a4e 50%,#203244 50%,#355371);
-  border-color: #101821;
-  text-shadow: #000 0px -1px -1px;
-  -moz-box-shadow: #192836 0 0.08em 0.2em 1px inset;
-  -webkit-box-shadow: #192836 0 0.08em 0.2em 1px inset;
-  -o-box-shadow: #192836 0 0.08em 0.2em 1px inset;
-  box-shadow: #192836 0 0.08em 0.2em 1px inset;
-}
-
-input[type=submit]:active,input[type=submit]:active:visited {
-  color: #fff;
-}
-
 div.field_with_errors label {
   color: red;
   font-weight: bold;
@@ -530,4 +456,40 @@ div.field_with_errors label {
 
 div.field_with_errors input {
   border: 3px solid red;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+fieldset{
+  border: 1px solid #ddd !important;
+  margin: 0;
+  xmin-width: 0;
+  padding: 10px;
+  position: relative;
+  border-radius:4px;
+  background-color:#f5f5f5;
+  padding-left:10px!important;
+}
+
+legend{
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom: 0px;
+	width: 35%;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px 5px 5px 10px;
+	background-color: #ffffff;
 }
