@@ -8,21 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
-  <div id="container">
-    <div id="content">
-      <%= yield %>
-      <hr>
-      <h6>
+  <div class="page-content-wrapper">
+    <div id="container" class="page-content">
+      <p class="flash">
+        <%= flash.notice %>
+      </p>
+      <div id="content">
+        <%= yield %>
+        <hr>
         <% if logged_in? %>
           <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "(logout)", logout_path %>
+          <%= link_to "Logout", logout_path, class: "btn btn-primary" %>
         <% else %>
-          <%= link_to "(login)", login_path %>
+          <%= link_to "Login", login_path, class: "new_article btn btn-primary" %>
         <% end %>
-      </h6>
+      </div>
     </div>
   </div>
 </body>

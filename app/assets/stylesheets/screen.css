@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-
 body {
   line-height: 1;
   color: black;
@@ -46,40 +34,6 @@ a img {
   border: none;
 }
 
-.fancy-button-reset-base-class,input[type=submit] {
-  font-family: "Lucida Grande",Lucida,Arial,sans-serif;
-  background: url('/images/button_bg.png?1301401396') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-}
-
-.fancy-button-reset-base-class::-moz-focus-inner,input[type=submit]::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-
-.fancy-button-reset-base-class:focus,input[type=submit]:focus {
-  outline: none;
-}
-
-article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  display: block;
-}
-
-.headings,h1 {
-  font-family: "Yanone Kaffeesatz", sans;
-}
-
 html {
   background: #FFF056;
   -moz-background-size: 80px 80px;
@@ -99,77 +53,6 @@ body {
   max-width: 1250px;
   min-height: 280px;
   position: relative;
-  line-height: 1.25em;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-}
-
-body:before {
-  content: " ";
-  z-index: -2;
-  position: absolute;
-  left: -4px;
-  right: 8px;
-  top: 8px;
-  height: 260px;
-  background: #2b445c;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) -2px 3px 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) -2px 3px 3px;
-  -o-box-shadow: rgba(0, 0, 0, 0.15) -2px 3px 3px;
-  box-shadow: rgba(0, 0, 0, 0.15) -2px 3px 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-  -moz-transform: rotate(-2deg);
-  -webkit-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-}
-
-body:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  bottom: 2px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  background: #000;
-  z-index: -1;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px 1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px 1px;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px 1px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px 1px;
 }
 
 a {
@@ -351,11 +234,11 @@ h1,h2,h3,h4,h5,h6 {
   text-decoration: none;
 }
 
-.top-button:hover,a.new_article:hover,.article_actions a[href$='edit']:hover,.article_actions a[data-method='delete']:hover {
+.top-button:hover,.article_actions a[href$='edit']:hover,.article_actions a[data-method='delete']:hover {
   color: #555;
 }
 
-.top-button:active,a.new_article:active,.article_actions a[href$='edit']:active,.article_actions a[data-method='delete']:active {
+.top-button:active,.article_actions a[href$='edit']:active,.article_actions a[data-method='delete']:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d9d9d9), color-stop(100%, #f5f5f5));
   background-image: -moz-linear-gradient(#d9d9d9,#f5f5f5);
   background-image: linear-gradient(#d9d9d9,#f5f5f5);
